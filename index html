@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Khushi ❤️</title>
+    <style>
+        body { text-align: center; font-family: 'Arial', sans-serif; background-color: #ffebee; padding-top: 50px; overflow: hidden; }
+        h1 { color: #d32f2f; font-size: 2em; }
+        .buttons { margin-top: 50px; }
+        button { padding: 15px 30px; font-size: 1.2em; cursor: pointer; border-radius: 10px; border: none; transition: 0.3s; }
+        #yesBtn { background-color: #4caf50; color: white; margin-right: 20px; }
+        #noBtn { background-color: #f44336; color: white; position: absolute; }
+    </style>
+</head>
+<body>
+    <h1>Khushi, Will you be my Valentine? ❤️</h1>
+    <div class="buttons">
+        <button id="yesBtn" onclick="celebrate()">Yes!</button>
+        <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">No</button>
+    </div>
+    <script>
+        function moveButton() {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 100);
+            const noBtn = document.getElementById('noBtn');
+            noBtn.style.left = x + 'px';
+            noBtn.style.top = y + 'px';
+        }
+        function celebrate() {
+            document.body.innerHTML = "<h1>I Knew It! ❤️<br>I Love You, Khushi!</h1><div style='font-size:50px;'>❤️❤️❤️</div>";
+        }
+    </script>
+</body>
+</html>
